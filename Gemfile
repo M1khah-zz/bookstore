@@ -36,11 +36,11 @@ group :test do
   gem 'circleci'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
-  gem 'rspec'
 end
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
 end
 
 group :development do
