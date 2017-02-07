@@ -31,16 +31,14 @@ group :production do
   gem 'passenger'
 end
 
-group :test do
+group :development, :test do
+  gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
   gem 'capybara'
   gem 'circleci'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
-end
-
-group :development, :test do
-  gem 'byebug', platform: :mri
-  gem 'rspec-rails'
 end
 
 group :development do
