@@ -26,6 +26,8 @@ gem 'cancan'
 gem 'aasm'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'circleci'
+gem 'ffaker'
 
 group :production do
   gem 'passenger'
@@ -36,7 +38,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'capybara'
-  gem 'circleci'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
 end
