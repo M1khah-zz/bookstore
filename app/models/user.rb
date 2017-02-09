@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
-  validates :first_name, :last_name, presence: true, length: { in: 2..20 }
+  validates :firstname, :lastname, presence: true, length: { in: 2..20 }
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

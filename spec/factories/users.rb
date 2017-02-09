@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :user do
-    firstname "MyString"
-    lastname "MyString"
-    email 'test@mail.com'
-    password '111111'
+    firstname { FFaker::Name.first_name }
+    lastname  { FFaker::Name.last_name }
+    email { FFaker::Interner.email }
+    password { FFaker::Interner.password }
   end
 end

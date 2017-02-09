@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :author do
-    firstname "MyString"
-    lastname "MyString"
+    firstname { FFaker::Name.first_name }
+    lastname  { FFaker::Name.last_name }
   end
 end
