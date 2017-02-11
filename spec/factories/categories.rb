@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :category do
-    title "MyString"
+    title {FFaker::Lorem.word}
   end
 end

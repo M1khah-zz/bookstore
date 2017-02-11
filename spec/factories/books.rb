@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :book do
-    title "MyString"
-    author nil
+    title {FFaker::Book.title}
   end
 end
