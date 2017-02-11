@@ -27,7 +27,6 @@ gem 'aasm'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'circleci'
-gem 'ffaker'
 
 group :production do
   gem 'passenger'
@@ -41,6 +40,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'pry'
+  gem 'ffaker'
 end
 
 group :development do
