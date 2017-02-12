@@ -28,6 +28,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'circleci'
 
+
 group :production do
   gem 'passenger'
 end
@@ -41,6 +42,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'pry'
   gem 'ffaker'
+  gem 'html2haml'
 end
 
 group :development do
