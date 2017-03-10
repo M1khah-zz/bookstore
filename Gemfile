@@ -27,6 +27,7 @@ gem 'aasm'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'circleci'
+gem 'rectify'
 
 
 group :production do
