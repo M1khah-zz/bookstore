@@ -10,7 +10,7 @@ RSpec.describe Rating, type: :model do
   it { is_expected.to validate_presence_of(:book_id)}
   it { is_expected.to validate_presence_of(:rating)}
   it do
-     is_expected.to validate_length_of(:review).is_at_least(5).is_at_most(100)
+     is_expected.to validate_length_of(:review).is_at_least(5).is_at_most(500)
   end
 
 end
