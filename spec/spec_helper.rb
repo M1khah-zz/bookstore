@@ -1,4 +1,5 @@
 RSpec.configure do |config|
+  require 'aasm/rspec'
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction

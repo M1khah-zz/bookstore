@@ -4,7 +4,6 @@ class Order < ApplicationRecord
   belongs_to :credit_card
   has_many :order_items, dependent: :destroy
   has_one :coupon
-  enum status: [:in_progress, :in_queue, :in_delivery, :delivered, :cancelled ]
 
   aasm column: :state do
     state :in_progress, initial: true
