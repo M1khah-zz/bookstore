@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170310233356) do
+ActiveRecord::Schema.define(version: 20170311132607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,17 @@ ActiveRecord::Schema.define(version: 20170310233356) do
     t.integer  "exp_year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "order_items", force: :cascade do |t|
+    t.integer  "order_id"
+    t.integer  "book_id"
+    t.integer  "quantity"
+    t.decimal  "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_order_items_on_book_id", using: :btree
+    t.index ["order_id"], name: "index_order_items_on_order_id", using: :btree
   end
 
   create_table "orders", force: :cascade do |t|
@@ -105,6 +116,8 @@ ActiveRecord::Schema.define(version: 20170310233356) do
   add_foreign_key "books", "authors"
   add_foreign_key "books", "categories"
   add_foreign_key "coupons", "orders"
+  add_foreign_key "order_items", "books"
+  add_foreign_key "order_items", "orders"
   add_foreign_key "orders", "users"
   add_foreign_key "ratings", "books"
   add_foreign_key "ratings", "users"

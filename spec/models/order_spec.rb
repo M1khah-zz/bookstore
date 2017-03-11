@@ -6,6 +6,7 @@ RSpec.describe Order, type: :model do
   end
 
   it {is_expected.to have_one(:coupon)}
+  it { is_expected.to have_many(:order_items)}
 
   it 'Changes it state on process event' do
     expect(@order).to transition_from(:in_progress).to(:in_queue).on_event(:process)
